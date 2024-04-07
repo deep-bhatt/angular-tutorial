@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RoomsComponent } from './components/rooms/rooms.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { RoomsListComponent } from './components/rooms-list/rooms-list.component';
+import { RoomsListComponent } from './components/rooms/rooms-list/rooms-list.component';
 import { HeaderComponent } from './components/header/header.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { AppNavComponent } from './components/app-nav/app-nav.component';

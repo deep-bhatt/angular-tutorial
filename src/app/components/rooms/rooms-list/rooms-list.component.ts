@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { RoomDetails } from '../../../types.g';
+import { RoomDetails } from '../../../../types.g';
 
 @Component({
   selector: 'app-rooms-list',
