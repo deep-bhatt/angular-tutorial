@@ -4,24 +4,11 @@
   No Rooms available.
 </div>
 
+<div *ngIf="selectedRoom">
+  <h2>Selected Room</h2>
+  {{ selectedRoom | json }}
+</div>
+
 <div *ngIf="room.availableRooms > 0">
-  <!-- {{ rooms | json }} -->
-  <table class='table'>
-    <tr [ngStyle]="{'color': room.availableRooms ? 'teal' : 'red'}">
-      <th>Sr. No</th>
-      <th>Room Id</th>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Price</th>
-      <th>Check-In Time</th>
-    </tr>
-    <tr [ngClass]="e ? 'even' : 'odd'" *ngFor="let room of rooms; let i=index; let e=even; let o=odd">
-      <td>{{i+1}}</td>
-      <td>{{room.id}}</td>
-      <td>{{room.name}}</td>
-      <td>{{room.description}}</td>
-      <td>{{room.price | currency: 'INR'}}</td>
-      <td>{{room.checkinTime | date: 'medium'}}</td>
-    </tr>
-  </table>
+  <app-rooms-list [rooms]="rooms" (selectedRoom)="chooseRoom($event)"></app-rooms-list>
 </div>
